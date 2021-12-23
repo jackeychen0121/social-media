@@ -1,4 +1,5 @@
 import React,{useRef} from 'react'
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
     const checkRef = useRef()
@@ -9,6 +10,7 @@ export default function SignUp() {
                 <img src="images/signup.svg" alt="sign_up" className="w-full h-full object-contain border-0"/>
                 <i className="fab fa-phoenix-framework text-8xl text-blue-500 absolute top-8 left-10"></i>
             </div>
+            
             <div className="signup__form w-1/3 h-screen bg-white flex items-center justify-center">
                 <form className="w-100">
                     <h3 className="text-3xl font-medium text-gray-500 mb-6">Adventure starts here 🚀</h3>
@@ -39,7 +41,7 @@ export default function SignUp() {
 
                     <input type="submit" value="Sign Up" className="w-full py-4 bg-indigo-500 text-white text-2xl text-center rounded-lg mt-6 cursor-pointer hover:shadow-xl"/>
 
-                    <p className="label__style text-center mt-8">Already have an account? <span className="text-indigo-500">Sign in instead</span></p>
+                    <p className="label__style text-center mt-8">Already have an account? <Link to="/signIn"><span className="text-indigo-500">Sign in instead</span></Link></p>
 
                     <div className="divide text-center label__style mt-9 mb-8 normal-case relative text-2xl orDivider">or</div>
 
